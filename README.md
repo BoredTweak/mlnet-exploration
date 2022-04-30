@@ -11,14 +11,8 @@ This project contains examples of various use cases for ML.NET
 
 [Inspiration for list](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/)
 
-- Classification
-  - https://en.wikipedia.org/wiki/Binary_classification
-  - https://en.wikipedia.org/wiki/Multiclass_classification
-  - https://www.kaggle.com/datasets/uciml/mushroom-classification 
-  - How likely are you to survive the titanic by Fare paid? 
-  - https://www.kaggle.com/c/titanic/data
-- Regression
-  - https://en.wikipedia.org/wiki/Regression_analysis
+- [Classification](mushroom-poison/README.md)
+- [Regression](lyft-uber-fare-prediction/README.md)
 - Recommendation
   - https://grouplens.org/datasets/movielens/
   - Recommend a movie for users
