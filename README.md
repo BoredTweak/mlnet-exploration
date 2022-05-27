@@ -13,10 +13,4 @@ This project contains examples of various use cases for ML.NET
 
 - [Classification](mushroom-poison/README.md)
 - [Regression](lyft-uber-fare-prediction/README.md)
-- Recommendation
-  - https://grouplens.org/datasets/movielens/
-  - Recommend a movie for users
-- Image Classification
-  - Is this Harper?
-- forecasting
-  - Stock levels?
+- [Recommendation](book-recommendation/README.md)

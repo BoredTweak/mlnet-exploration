@@ -1,0 +1,189 @@
+{
+  "TrainingTime": 100,
+  "Scenario": "Recommendation",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\dev\\projects\\mlnet-exploration\\book-recommendation\\BX-Book-Ratings.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "User-ID",
+        "ColumnPurpose": "User",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "ISBN",
+        "ColumnPurpose": "Item",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "Book-Rating",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 1,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": 0.13762951674884616,
+        "RuntimeInSeconds": 1.7740000486373901
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.0538739576696301,
+        "RuntimeInSeconds": 0.18000000715255737
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.09544824919059103,
+        "RuntimeInSeconds": 0.17299999296665192
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.11967333523502233,
+        "RuntimeInSeconds": 4.064000129699707
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.2098290906385667,
+        "RuntimeInSeconds": 1.2660000324249268
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.22495518004725268,
+        "RuntimeInSeconds": 16.888999938964844
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.23189503464299555,
+        "RuntimeInSeconds": 1.2979999780654907
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.2335290829622847,
+        "RuntimeInSeconds": 59.09000015258789
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.28410014882755563,
+        "RuntimeInSeconds": 0.3089999854564667
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.2843156333344983,
+        "RuntimeInSeconds": 0.210999995470047
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -1.0119641652488216,
+        "RuntimeInSeconds": 2.046999931335449
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -1.7836440955700388,
+        "RuntimeInSeconds": 8.02299976348877
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -471335.8968443302,
+        "RuntimeInSeconds": 0.7409999966621399
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -148574325492.6083,
+        "RuntimeInSeconds": 0.37400001287460327
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -7.527815670551158E+58,
+        "RuntimeInSeconds": 1.531999945640564
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -4.99970231408943E+63,
+        "RuntimeInSeconds": 0.17499999701976776
+      }
+    ],
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnName": "ISBN",
+          "InputColumnName": "ISBN"
+        },
+        "1": {
+          "OutputColumnName": "User-ID",
+          "InputColumnName": "User-ID"
+        },
+        "2": {
+          "LabelColumnName": "Book-Rating",
+          "MatrixColumnIndexColumnName": "User-ID",
+          "MatrixRowIndexColumnName": "ISBN",
+          "ApproximationRank": 10,
+          "LearningRate": 0.021003955310764,
+          "NumberOfIterations": 9,
+          "Quiet": true
+        }
+      },
+      "estimators": [
+        "MapValueToKey",
+        "MapValueToKey",
+        "MatrixFactorization"
+      ]
+    },
+    "MetricName": "RSquared"
+  },
+  "Type": "TrainingConfig",
+  "Version": 2
+}
